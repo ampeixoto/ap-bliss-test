@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- [NPM] (https://www.npmjs.com/) version 3.10.10
+- [NPM](https://www.npmjs.com/) version 3.10.10
 - [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
 
 ## Clone repository
