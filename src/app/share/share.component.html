@@ -1,0 +1,17 @@
+<h2 class="page-title">
+  Share Content
+</h2>
+
+<div class="form-group">
+  {{ linkToShare || 'Nothing to share' }}
+</div>
+
+<div class="form-group">
+  <input class="form-control" placeholder="Destination Email" [(ngModel)]="destinationEmail" name="destinationEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+    type="email" />
+</div>
+
+<div class="form-group">
+  <button class="btn-default" (click)="goBack()">Go back</button>
+  <button class="btn-primary" (click)="shareLink()">Share</button>
+</div>

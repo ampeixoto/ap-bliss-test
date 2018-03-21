@@ -1,0 +1,20 @@
+<h2 class="page-title">
+  List of Questions
+</h2>
+
+<h4>Search Question</h4>
+<div class="form-group">
+  <input #searchBox class="form-control" placeholder="Search Term" [(ngModel)]="searchTerm" name="searchTerm" />
+</div>
+<div class="form-group">
+  <button class="btn-default" (click)="clearSearch()">Clear search</button>
+  <button class="btn-primary" (click)="search()">Search</button>
+  <button class="btn-secondary" *ngIf="searchShown" (click)="shareSearch()">Share Search</button>
+</div>
+
+<ul class="list-group">
+  <a href="#" class="list-group-item list-group-item-action" *ngFor="let question of questions" routerLink="/questions/{{question.id}}">
+    <p>{{question.id}} - {{question.question}}</p>
+    <img src="{{question.thumb_url}}" />
+  </a>
+</ul>

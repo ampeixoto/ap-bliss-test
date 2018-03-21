@@ -1,0 +1,25 @@
+<h2 class="page-title">
+  Question
+</h2>
+
+<div *ngIf="question">
+  <div class="form-group">{{ question.id }}</div>
+  <div class="form-group">{{ question.question}}</div>
+  <div class="form-group">{{ question.published_at | date:'full' }}</div>
+  <div class="form-group">
+    <img src="{{ question.image_url }}" class="img-fluid"/>
+  </div>
+  <div class="form-group">
+    <select>
+      <option value="{{choice.choice}}" *ngFor="let choice of question.choices">
+        {{choice.choice}} ({{choice.votes}})
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="form-group">
+  <button class="btn-default" (click)="goBack()">Go back</button>
+  <button class="btn-primary" (click)="vote(question)">Vote</button>
+  <button class="btn-secondary" (click)="shareQuestion()">Share Question</button>
+</div>
