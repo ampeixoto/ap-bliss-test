@@ -17,3 +17,9 @@ In the system's terminal, navigate to the source folder of the project and run `
 ## Deploy application in a development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+## Documentation
+
+Documentation as been generated using [CompoDoc](https://compodoc.github.io/website/guides/getting-started.html).
+
+To open the documentation go to the `documentation` folder and open the `index.html` file within your browser.
