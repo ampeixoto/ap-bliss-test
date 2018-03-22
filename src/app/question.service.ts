@@ -5,13 +5,13 @@ import { QUESTIONS } from './questions/mock-questions';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class QuestionService {
 
   // TODO: add limit and offset params to URL
-  // TODO: Split Base URL (common location - environment settings) and the rest of the url (questions)
-  private questionsUrl = 'https://private-anon-81d2847e1a-blissrecruitmentapi.apiary-mock.com/questions';
+  private questionsUrl = environment.backendBaseURL + '/questions';
 
   constructor(private http: HttpClient) { }
 
