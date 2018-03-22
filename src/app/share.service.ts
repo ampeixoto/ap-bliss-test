@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class ShareService {
 
-    // TODO: Split Base URL (common location - environment settings) and the rest of the url (share)
-    private shareUrl = 'https://private-anon-81d2847e1a-blissrecruitmentapi.apiary-mock.com/share';
+    private shareUrl = environment.backendBaseURL + '/share';
 
     constructor(private http: HttpClient) { }
 
